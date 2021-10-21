@@ -1,12 +1,17 @@
+require("./db/connect");
+
 const express = require("express");
 const app = express();
+
+require("dotenv").config();
 
 const tasksRouter = require("./routes/tasks");
 
 //middleware
 app.use(express.json());
 
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 7070;
+console.log(process.env.PORT);
 
 //routes
 app.get("/", (req, res) => {
