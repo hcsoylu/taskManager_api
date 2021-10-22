@@ -12,11 +12,6 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 7070;
 
-//routes
-app.get("/", (req, res) => {
-  res.send("Task Manager App");
-});
-
 app.use("/api/v1/tasks", tasksRouter);
 
 const start = async () => {
